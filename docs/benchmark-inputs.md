@@ -8,7 +8,7 @@ The evaluation fits on pre-validation history, selects models on validation Prec
 
 ## Private HIT-100 bundle
 
-Build this JSON projection inside an approved research workspace. The chart command accepts one metric in additive daily units (e.g. daily streams). Convert cumulative counts into properly dated deltas upstream. Keep original publication timestamps, original source records, coverage evidence, ingestion timestamps, and the identity crosswalk in the restricted data layer. Round an input's availability up to the first UTC midnight at which it was knowable. Use official publication dates in UTC for chart labels and take weekly snapshots only after chart releases scheduled on the cutoff day are available, or use a cutoff calendar that avoids overlapping release days.
+Build this JSON projection inside an approved research workspace. The chart command accepts one metric in additive daily units (e.g. daily streams). Convert cumulative counts into properly dated deltas upstream. Keep original publication timestamps, original source records, coverage evidence, ingestion timestamps, and the identity crosswalk in the restricted data layer. Round an input's availability up to the first UTC midnight at which it was knowable. Project official chart publication timestamps to that same boundary for `first_chart_on`. The horizon and the declared chart coverage end are measured at UTC midnight.
 
 ```json
 {

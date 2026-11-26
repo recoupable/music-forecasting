@@ -64,7 +64,7 @@ def build_weeks(settings, start, series):
     last = date.fromisoformat(settings["last_cutoff"])
     if len(set(cohort)) != len(cohort) or not 0 < k <= len(cohort) - rank or not 0 < rank < len(cohort):
         raise ValueError("Invalid cohort or rank")
-    if not 0 <= lag or not 1 <= horizon <= 364 - lag or first > last:
+    if lag < 0 or not 1 <= horizon <= 364 - lag or first > last:
         raise ValueError("Invalid benchmark dates")
     cumulative = np.vstack([np.zeros(len(cohort), dtype=np.int64), np.cumsum(series, axis=0)])
 
@@ -126,7 +126,7 @@ def evaluate(weeks, predict, k, probabilities=False):
     summary = {
         "precision_at_k": mean(row[0] for row in details),
         "recall_at_k": mean(recalls) if recalls else None,
-        "brier": mean(row[2] for row in details) if probabilities else None,
+        "brier": round(mean(row[2] for row in details), 12) if probabilities else None,
     }
     return summary, [row[0] for row in details]
 
@@ -144,7 +144,7 @@ def paired_interval(deltas, block, samples=4000):
             start = rng.randrange(size)
             sample.extend(deltas[(start + i) % size] for i in range(block))
         means.append(mean(sample[:size]))
-    return [float(value) for value in np.quantile(means, [0.025, 0.975])]
+    return [round(float(value), 12) or 0.0 for value in np.quantile(means, [0.025, 0.975])]
 
 
 BASELINES = {

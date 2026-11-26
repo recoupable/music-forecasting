@@ -34,22 +34,22 @@
       "logistic_popularity": {
         "precision_at_k": 0.194,
         "recall_at_k": 0.8523206751054853,
-        "brier": 0.06967879179257967
+        "brier": 0.069678791793
       },
       "logistic_momentum": {
         "precision_at_k": 0.196,
         "recall_at_k": 0.8248945147679325,
-        "brier": 0.06853873616448303
+        "brier": 0.068538736164
       },
       "logistic_seasonality": {
         "precision_at_k": 0.21200000000000002,
         "recall_at_k": 0.919831223628692,
-        "brier": 0.05742452474701757
+        "brier": 0.057424524747
       },
       "logistic_all": {
         "precision_at_k": 0.21200000000000002,
         "recall_at_k": 0.9219409282700421,
-        "brier": 0.057136682428415124
+        "brier": 0.057136682428
       }
     }
   },
@@ -67,7 +67,7 @@
       "strategy": "logistic_seasonality",
       "precision_at_k": 0.21710526315789475,
       "recall_at_k": 0.8481481481481481,
-      "brier": 0.06764581669797032
+      "brier": 0.067645816698
     },
     "baseline": {
       "strategy": "prior_year_attention",
@@ -77,8 +77,8 @@
     },
     "paired_precision_delta": 0.010526315789473684,
     "paired_95_interval": [
-      -3.6520494231090674e-19,
-      0.02236842105263158
+      0.0,
+      0.022368421053
     ],
     "moving_block_weeks": 5,
     "hillclimb_observed": false,
