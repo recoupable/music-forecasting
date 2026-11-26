@@ -31,7 +31,9 @@
     "Stairway_to_Heaven",
     "Thriller_(song)",
     "Under_Pressure",
-    "Wonderwall_(song)",
-    "Yesterday_(song)"
-  ]
+    "Wonderwall_(song)"
+  ],
+  "excluded_for_source_coverage": {
+    "Yesterday_(song)": "Wikimedia returned 31 missing days. Excluded before evaluation under the complete-series rule."
+  }
 }

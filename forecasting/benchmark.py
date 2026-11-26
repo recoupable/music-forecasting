@@ -119,7 +119,8 @@ def evaluate(weeks, predict, k, probabilities=False):
     for week in weeks:
         predictions = predict(week)
         precision, recall = score(week.labels, predictions, k)
-        brier = mean((float(value) - label) ** 2 for value, label in zip(predictions, week.labels))
+        brier = (mean((float(value) - label) ** 2 for value, label in zip(predictions, week.labels))
+                 if probabilities else None)
         details.append((precision, recall, brier))
     recalls = [row[1] for row in details if row[1] is not None]
     summary = {
@@ -179,6 +180,10 @@ def fit(weeks, indexes):
 def run(config, dataset):
     settings, start, series, digest = load_dataset(config, dataset)
     weeks = build_weeks(settings, start, series)
+    return compare(weeks, settings, digest)
+
+
+def compare(weeks, settings, digest, baselines=BASELINES, challengers=CHALLENGERS):
     k = settings["k"]
     validation_start = date.fromisoformat(settings["validation_start"])
     test_start = date.fromisoformat(settings["test_start"])
@@ -189,9 +194,9 @@ def run(config, dataset):
         raise ValueError("Expected nonempty development, validation, and holdout periods")
 
     leaderboard = {}
-    for name, index in BASELINES.items():
+    for name, index in baselines.items():
         leaderboard[name], _ = evaluate(validation, lambda week: baseline(week, index), k)
-    for name, indexes in CHALLENGERS.items():
+    for name, indexes in challengers.items():
         model = fit(development, indexes)
         leaderboard[name], _ = evaluate(
             validation, lambda week: model.predict_proba(np.asarray(week.candidates)[:, indexes])[:, 1], k, True
@@ -200,15 +205,15 @@ def run(config, dataset):
     def key(name):
         return leaderboard[name]["precision_at_k"]
 
-    winner = max(CHALLENGERS, key=key)
-    control = max(BASELINES, key=key)
-    indexes = CHALLENGERS[winner]
+    winner = max(challengers, key=key)
+    control = max(baselines, key=key)
+    indexes = challengers[winner]
     training = training_before(weeks, test_start)
     model = fit(training, indexes)
     winner_scores, winner_weekly = evaluate(
         holdout, lambda week: model.predict_proba(np.asarray(week.candidates)[:, indexes])[:, 1], k, True
     )
-    control_scores, control_weekly = evaluate(holdout, lambda week: baseline(week, BASELINES[control]), k)
+    control_scores, control_weekly = evaluate(holdout, lambda week: baseline(week, baselines[control]), k)
     deltas = [w - c for w, c in zip(winner_weekly, control_weekly)]
     block = (settings["horizon_days"] + settings["availability_lag_days"] + 6) // 7
     interval = paired_interval(deltas, block)
@@ -226,7 +231,8 @@ def run(config, dataset):
             "weeks": len(holdout),
             "first_cutoff": str(holdout[0].cutoff),
             "last_cutoff": str(holdout[-1].cutoff),
-            "candidates_per_week": len(holdout[0].labels),
+            "candidate_count_range": [min(len(week.labels) for week in holdout),
+                                      max(len(week.labels) for week in holdout)],
             "zero_positive_weeks": sum(not any(week.labels) for week in holdout),
             "challenger": {"strategy": winner, **winner_scores},
             "baseline": {"strategy": control, **control_scores},

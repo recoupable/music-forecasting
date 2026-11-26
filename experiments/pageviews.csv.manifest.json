@@ -1,0 +1,92 @@
+{
+  "benchmark": "song-pageviews-entry-v1",
+  "source_license": "CC0-1.0",
+  "csv_sha256": "6fa670988bc735eb2fe62dcf7dfa03763dfddce3c527b6260a8cc17561723790",
+  "cohort_sha256": "a9f365a0c2d94425d4f78d31d19b000ed6836702e3813b721dbb57029ca5ea0d",
+  "source_series": {
+    "All_I_Want_for_Christmas_Is_You": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/All_I_Want_for_Christmas_Is_You/daily/20170101/20250101",
+      "response_sha256": "566438744cd56717b1f7d133885b71817fd607c49a70c35589fe06f881b5fe15"
+    },
+    "Billie_Jean": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Billie_Jean/daily/20170101/20250101",
+      "response_sha256": "4e31e95bc053bd7bea4c96f06920d940db1bbe4c229ff58e50b8a2335afc3001"
+    },
+    "Bohemian_Rhapsody": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Bohemian_Rhapsody/daily/20170101/20250101",
+      "response_sha256": "5efea8393811ec575b3478df71d273d536e187458faba179ed879bf34358755e"
+    },
+    "Dancing_Queen": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Dancing_Queen/daily/20170101/20250101",
+      "response_sha256": "e0519b70579a7c5f0737a563881ea7838e09148e129cddd004853170900e8dad"
+    },
+    "Every_Breath_You_Take": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Every_Breath_You_Take/daily/20170101/20250101",
+      "response_sha256": "0d6718debc205cac6820f6f6cf629c41a322f857b90b4ebcc3380a6ca1bfd3f3"
+    },
+    "Gimme_Shelter": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Gimme_Shelter/daily/20170101/20250101",
+      "response_sha256": "5f23523e0c7da57fff7cdd4108f8e5d9a19ee8ffcb1d1b1a8ee1535262722fdd"
+    },
+    "Hallelujah_(Leonard_Cohen_song)": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Hallelujah_%28Leonard_Cohen_song%29/daily/20170101/20250101",
+      "response_sha256": "71ddb240fa14173a432be514586d0ef9002ab25f6ec8035a87b58b406a3bd78e"
+    },
+    "Hotel_California_(song)": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Hotel_California_%28song%29/daily/20170101/20250101",
+      "response_sha256": "d4ebdcd2fb454944fc4ed4d0d99b0ed3ffc4dc72d6119993a39ce963d02e2df4"
+    },
+    "Imagine_(John_Lennon_song)": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Imagine_%28John_Lennon_song%29/daily/20170101/20250101",
+      "response_sha256": "9bc558259f44b1d0a45a0009790fc194275479ddfea27e27c6be13cf57fea6be"
+    },
+    "Jolene_(song)": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Jolene_%28song%29/daily/20170101/20250101",
+      "response_sha256": "6ae2ac8504f6b40c5acb3e345a0988760b68bcf5995f94d3fe1712c7f304afda"
+    },
+    "Last_Christmas": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Last_Christmas/daily/20170101/20250101",
+      "response_sha256": "0122a78b3830fcf268af49c108a1cdf3bd36ba04fa68282fc014dd3df87ff73d"
+    },
+    "Like_a_Rolling_Stone": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Like_a_Rolling_Stone/daily/20170101/20250101",
+      "response_sha256": "0b8e7ae304265bf66c8219768eb8174488cf4019f52ff563fa23d75ac1da2747"
+    },
+    "Lose_Yourself": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Lose_Yourself/daily/20170101/20250101",
+      "response_sha256": "f9702c08c00e03505fa317ca743f930e41161a6a031f48aa0bcaa7f033349945"
+    },
+    "Never_Gonna_Give_You_Up": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Never_Gonna_Give_You_Up/daily/20170101/20250101",
+      "response_sha256": "0a50d174bc42bfcb4f90694f68279b2470230f892e885bcf585ce86846d15ccb"
+    },
+    "Purple_Rain_(song)": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Purple_Rain_%28song%29/daily/20170101/20250101",
+      "response_sha256": "c43a6dce31e9ef4dc9d2657a5c6158bc2c7d69e6d7f3dd4b04baf4d74dc41a6f"
+    },
+    "Rolling_in_the_Deep": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Rolling_in_the_Deep/daily/20170101/20250101",
+      "response_sha256": "c2378c9679208c23267e0f3d8eb96dc46ae719ea54f219a11f5e7845dd138814"
+    },
+    "Smells_Like_Teen_Spirit": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Smells_Like_Teen_Spirit/daily/20170101/20250101",
+      "response_sha256": "dc237980ce3ce936d5832f2de805fd079a70b7f805ea1c6eadf382b413800de0"
+    },
+    "Stairway_to_Heaven": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Stairway_to_Heaven/daily/20170101/20250101",
+      "response_sha256": "44d2cea56e5ca2286667169286a752bf05bb7bb35f7413afb5306aaaea246408"
+    },
+    "Thriller_(song)": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Thriller_%28song%29/daily/20170101/20250101",
+      "response_sha256": "3811d084ae606c1d96140ba4c8f289139c450f60b5f4183d02f77a8143a20b9a"
+    },
+    "Under_Pressure": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Under_Pressure/daily/20170101/20250101",
+      "response_sha256": "1ab88043daf774be8c1e58e9587baee9490bece09af760c75aab01522e609dd4"
+    },
+    "Wonderwall_(song)": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Wonderwall_%28song%29/daily/20170101/20250101",
+      "response_sha256": "61f16f32e027c037ab1e693f5279655cd9d352019bea41b2cc88d1213fb0a41a"
+    }
+  }
+}
