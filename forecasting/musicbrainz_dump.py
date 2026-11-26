@@ -144,7 +144,6 @@ def project(settings, archive, output):
         "source": "musicbrainz-core-dump",
         "source_sha256": source_sha256,
         "release_editions": len({rid for item in recordings for rid in item["release_ids"]}),
-        "indexed_recordings_seen": len(recordings),
         "recordings": recordings,
     }, indent=2) + "\n")
 

@@ -153,7 +153,7 @@ def run(config, archive, cohort, output):
         "chart_sha256": check["source_sha256"],
         "config_sha256": hashlib.sha256(config_bytes).hexdigest(),
         "release_editions": source["release_editions"],
-        "indexed_recordings_seen": source["indexed_recordings_seen"],
+        "release_source_sha256": source["source_sha256"],
         "recordings": len(crosswalk),
         "recordings_with_isrc": sum(bool(row["isrcs"]) for row in crosswalk),
         "join_counts": dict(sorted(Counter(row["status"] for row in crosswalk).items())),
