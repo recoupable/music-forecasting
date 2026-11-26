@@ -29,9 +29,9 @@ Both runs cover 53 weekly cutoffs. The model tied the strongest simple baseline.
 mkdir -p .forecast
 python -m pip install -r requirements.txt duckdb==1.5.4
 curl -fL -C - -o .forecast/mbdump-sample.tar.xz https://data.metabrainz.org/pub/musicbrainz/data/sample/20261101-000001/mbdump-sample.tar.xz
-curl -fL -o .forecast/hot100-all.json https://raw.githubusercontent.com/mhollingshead/billboard-hot-100/main/all.json
+curl -fL -o .forecast/hot100-all.json https://raw.githubusercontent.com/mhollingshead/billboard-hot-100/5af164788567600d1565800c2e1bb879c6ef8877/all.json
 python -m forecasting.musicbrainz_dump .forecast/mbdump-sample.tar.xz
 python -m forecasting.hit100_cohort .forecast/hot100-all.json .forecast/musicbrainz-cohort.json > .forecast/hit100-results.json
 ```
 
-The tools store row-level release/join outputs and downloaded inputs under the ignored `.forecast` directory. Each run gives hashes for its inputs. The chart URL is a mutable archive, so a later download may have a different hash. The replay caps chart rows at a fixed issue boundary.
+The tools store row-level release/join outputs and downloaded inputs under the ignored `.forecast` directory. Each run gives hashes for its inputs. The documented chart URL points to the exact Git blob used in the reported run. The replay also caps chart rows at a fixed issue boundary.
