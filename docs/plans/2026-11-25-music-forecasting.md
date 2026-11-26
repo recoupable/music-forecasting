@@ -34,7 +34,7 @@ References [Luminate Music API chart endpoints](https://docs.luminatedata.com/ch
 - Current track measurements return `date`, `value` and `data_source`. For historical evaluation, require independent publication or ingestion evidence for each vintage. A present-day backfill alone cannot prove a past information cutoff. Begin prospective capture now once the cohort and source authority exist.
 - If needed, add append-only observation vintages in `recoupable/database`; use service-owned ingestion plus organization-scoped read policies. Keep occurrence, original availability, capture and revision times distinct. Reuse Recoup auth and the measurement domain functions in `recoupable/api`. Add a versioned snapshot export endpoint only when the existing reads and input contract cannot deliver the required vintages. Test cross-organization denial, nullable availability, revisions, pagination and idempotency.
 
-References [Recoup track measurements](https://docs.recoupable.dev/api-reference/research/tracks-measurements) · [Measurement jobs](https://docs.recoupable.dev/api-reference/research/measurement-jobs)
+References [Recoup track measurements](https://docs.recoupable.dev/api-reference) · [Measurement jobs](https://docs.recoupable.dev/api-reference/research/measurement-jobs)
 
 ### Audio and feature extraction
 
