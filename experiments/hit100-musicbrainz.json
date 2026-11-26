@@ -1,0 +1,21 @@
+{
+  "benchmark": "hit-100-musicbrainz-issue-date-v1",
+  "first_release_month": "2022-01",
+  "last_release_month": "2024-12",
+  "first_cutoff": "2022-07-04",
+  "validation_start": "2023-07-03",
+  "test_start": "2024-01-01",
+  "last_cutoff": "2024-12-30",
+  "candidate_age_days": 180,
+  "chart_issue_lead_days": 7,
+  "labels": [
+    "Atlantic Records",
+    "Capitol Records",
+    "Columbia Records",
+    "Def Jam Recordings",
+    "Interscope Records",
+    "RCA Records",
+    "Republic Records",
+    "Warner Records"
+  ]
+}
