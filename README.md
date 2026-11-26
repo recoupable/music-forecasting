@@ -23,6 +23,7 @@ python -m forecasting.benchmark
 The versioned data snapshot is included. To collect a fresh snapshot from Wikimedia with curl, run `python -m forecasting.wikimedia --output .forecast/pageviews.csv.gz`. To replay the public snapshot in an authenticated Modal workspace, install the Modal SDK and run `modal run modal_benchmark.py`.
 
 - [Public results and weekly scores](experiments/attention-results.json)
+- [HIT-100 source qualification](docs/hit-100-source-qualification.md)
 - [Chart and audio input contracts](docs/benchmark-inputs.md)
 - [Implementation and acquisition plan](docs/plans/2026-11-25-music-forecasting.md)
 - [Point-in-Time Music Forecasting RFC](SPEC.md)
