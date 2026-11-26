@@ -1,0 +1,848 @@
+{
+  "benchmark": "song-pageviews-entry-v1",
+  "dataset_sha256": "6fa670988bc735eb2fe62dcf7dfa03763dfddce3c527b6260a8cc17561723790",
+  "precision_k": 5,
+  "validation": {
+    "training_weeks": 101,
+    "weeks": 100,
+    "strategies": {
+      "random": {
+        "precision_at_k": 0.1,
+        "recall_at_k": 0.44936708860759494,
+        "brier": null
+      },
+      "popularity_28d": {
+        "precision_at_k": 0.192,
+        "recall_at_k": 0.8459915611814346,
+        "brier": null
+      },
+      "popularity_84d": {
+        "precision_at_k": 0.15000000000000002,
+        "recall_at_k": 0.7088607594936709,
+        "brier": null
+      },
+      "momentum": {
+        "precision_at_k": 0.092,
+        "recall_at_k": 0.33544303797468356,
+        "brier": null
+      },
+      "prior_year_attention": {
+        "precision_at_k": 0.20600000000000002,
+        "recall_at_k": 0.8818565400843882,
+        "brier": null
+      },
+      "logistic_popularity": {
+        "precision_at_k": 0.194,
+        "recall_at_k": 0.8523206751054853,
+        "brier": 0.069678791793
+      },
+      "logistic_momentum": {
+        "precision_at_k": 0.196,
+        "recall_at_k": 0.8248945147679325,
+        "brier": 0.068538736164
+      },
+      "logistic_seasonality": {
+        "precision_at_k": 0.21200000000000002,
+        "recall_at_k": 0.919831223628692,
+        "brier": 0.057424524747
+      },
+      "logistic_all": {
+        "precision_at_k": 0.21200000000000002,
+        "recall_at_k": 0.9219409282700421,
+        "brier": 0.057136682428
+      }
+    }
+  },
+  "holdout": {
+    "fit_weeks": 205,
+    "weeks": 152,
+    "first_cutoff": "2022-01-03",
+    "last_cutoff": "2024-11-25",
+    "candidate_count_range": [
+      13,
+      13
+    ],
+    "zero_positive_weeks": 17,
+    "challenger": {
+      "strategy": "logistic_seasonality",
+      "precision_at_k": 0.21710526315789475,
+      "recall_at_k": 0.8481481481481481,
+      "brier": 0.067645816698
+    },
+    "baseline": {
+      "strategy": "prior_year_attention",
+      "precision_at_k": 0.20657894736842106,
+      "recall_at_k": 0.8037037037037037,
+      "brier": null
+    },
+    "paired_precision_delta": 0.010526315789473684,
+    "paired_95_interval": [
+      0.0,
+      0.022368421053
+    ],
+    "moving_block_weeks": 5,
+    "hillclimb_observed": false,
+    "paired_weekly": [
+      {
+        "cutoff": "2022-01-03",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-01-10",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2022-01-17",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2022-01-24",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-01-31",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-02-07",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2022-02-14",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-02-21",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2022-02-28",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2022-03-07",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2022-03-14",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2022-03-21",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2022-03-28",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-04-04",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-04-11",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-04-18",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-04-25",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2022-05-02",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-05-09",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-05-16",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-05-23",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-05-30",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2022-06-06",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-06-13",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-06-20",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-06-27",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-07-04",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-07-11",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-07-18",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-07-25",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-08-01",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2022-08-08",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2022-08-15",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-08-22",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2022-08-29",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2022-09-05",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-09-12",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2022-09-19",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-09-26",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-10-03",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-10-10",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-10-17",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-10-24",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2022-10-31",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2022-11-07",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-11-14",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-11-21",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-11-28",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-12-05",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-12-12",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-12-19",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2022-12-26",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2023-01-02",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-01-09",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2023-01-16",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2023-01-23",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2023-01-30",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2023-02-06",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-02-13",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-02-20",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-02-27",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2023-03-06",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2023-03-13",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-03-20",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-03-27",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-04-03",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-04-10",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-04-17",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2023-04-24",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2023-05-01",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2023-05-08",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2023-05-15",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-05-22",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2023-05-29",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2023-06-05",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2023-06-12",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2023-06-19",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2023-06-26",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2023-07-03",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2023-07-10",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2023-07-17",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2023-07-24",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-07-31",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-08-07",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-08-14",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-08-21",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-08-28",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2023-09-04",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-09-11",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-09-18",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2023-09-25",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2023-10-02",
+        "challenger_precision": 0.6,
+        "baseline_precision": 0.6
+      },
+      {
+        "cutoff": "2023-10-09",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2023-10-16",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-10-23",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2023-10-30",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2023-11-06",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-11-13",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-11-20",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-11-27",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2023-12-04",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-12-11",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-12-18",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2023-12-25",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-01-01",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-01-08",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-01-15",
+        "challenger_precision": 0.6,
+        "baseline_precision": 0.6
+      },
+      {
+        "cutoff": "2024-01-22",
+        "challenger_precision": 0.6,
+        "baseline_precision": 0.6
+      },
+      {
+        "cutoff": "2024-01-29",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-02-05",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2024-02-12",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2024-02-19",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-02-26",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-03-04",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-03-11",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2024-03-18",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2024-03-25",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2024-04-01",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2024-04-08",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2024-04-15",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2024-04-22",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2024-04-29",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2024-05-06",
+        "challenger_precision": 0.6,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-05-13",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-05-20",
+        "challenger_precision": 0.6,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-05-27",
+        "challenger_precision": 0.6,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-06-03",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-06-10",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2024-06-17",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2024-06-24",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2024-07-01",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2024-07-08",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2024-07-15",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-07-22",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2024-07-29",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-08-05",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-08-12",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-08-19",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2024-08-26",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2024-09-02",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2024-09-09",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-09-16",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-09-23",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-09-30",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-10-07",
+        "challenger_precision": 0.4,
+        "baseline_precision": 0.4
+      },
+      {
+        "cutoff": "2024-10-14",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2024-10-21",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2024-10-28",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2024-11-04",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2024-11-11",
+        "challenger_precision": 0.2,
+        "baseline_precision": 0.2
+      },
+      {
+        "cutoff": "2024-11-18",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      },
+      {
+        "cutoff": "2024-11-25",
+        "challenger_precision": 0.0,
+        "baseline_precision": 0.0
+      }
+    ]
+  }
+}

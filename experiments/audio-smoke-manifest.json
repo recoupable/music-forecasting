@@ -1,0 +1,9 @@
+{
+  "recording_id": "loc:jukebox-34462:00-02-11",
+  "source": "Citizen DJ Project, Library of Congress, National Jukebox",
+  "source_url": "https://s3.amazonaws.com/citizen-dj-assets.labs.loc.gov/audio/samplepacks/loc-jukebox-popular/Russian-rag_jukebox-34462_001_00-02-11.wav",
+  "approval_ref": "https://citizen-dj.labs.loc.gov/loc-jukebox-popular/use/#rights-access",
+  "available_on": "2026-11-25",
+  "allowed_processing": ["local"],
+  "sha256": "708eb6cb54e194f32d3c06634c38fd17af2ffca1b32095e8c699cba7ea766932"
+}

@@ -1,0 +1,39 @@
+{
+  "benchmark": "song-pageviews-entry-v1",
+  "source_start": "20170101",
+  "source_end": "20250101",
+  "first_cutoff": "2018-01-01",
+  "validation_start": "2020-01-06",
+  "test_start": "2022-01-03",
+  "last_cutoff": "2024-11-25",
+  "availability_lag_days": 7,
+  "horizon_days": 28,
+  "attention_rank": 8,
+  "k": 5,
+  "pages": [
+    "All_I_Want_for_Christmas_Is_You",
+    "Billie_Jean",
+    "Bohemian_Rhapsody",
+    "Dancing_Queen",
+    "Every_Breath_You_Take",
+    "Gimme_Shelter",
+    "Hallelujah_(Leonard_Cohen_song)",
+    "Hotel_California_(song)",
+    "Imagine_(John_Lennon_song)",
+    "Jolene_(song)",
+    "Last_Christmas",
+    "Like_a_Rolling_Stone",
+    "Lose_Yourself",
+    "Never_Gonna_Give_You_Up",
+    "Purple_Rain_(song)",
+    "Rolling_in_the_Deep",
+    "Smells_Like_Teen_Spirit",
+    "Stairway_to_Heaven",
+    "Thriller_(song)",
+    "Under_Pressure",
+    "Wonderwall_(song)"
+  ],
+  "excluded_for_source_coverage": {
+    "Yesterday_(song)": "Wikimedia returned 31 missing days. Excluded before evaluation under the complete-series rule."
+  }
+}

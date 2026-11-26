@@ -8,10 +8,23 @@ The proposed framework reconstructs historical snapshots, runs forecasting strat
 
 The proposed **90-Day Chart Entry Benchmark (HIT-100)** ranks previously released recordings that have never entered the Billboard Hot 100 by their probability of entering in the next 90 days. It starts with simple baselines such as popularity and recent growth. Including releases that never chart helps account for survivorship bias.
 
-## Research status
+## Reproduce the public pilot
 
-This repository contains a draft research specification. The simulator, CLI, datasets, and benchmark results are planned. The RFC's example scores are hypothetical.
+The held-out pilot used 21 song pages and 152 weekly cutoffs. The selected challenger achieved 21.71% Precision@5 versus 20.66% for the strongest validation-selected baseline. The paired 95% interval for the +1.05 percentage-point difference includes zero. Wikipedia pageviews measure attention and the result does not establish any improvement in predicting chart entry.
 
-- [Read the Point-in-Time Music Forecasting RFC](SPEC.md)
-- [Contribute to the research](CONTRIBUTING.md)
+```sh
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m unittest discover -s tests -v
+python -m forecasting.benchmark
+```
+
+The versioned data snapshot is included. To collect a fresh snapshot from Wikimedia with curl, run `python -m forecasting.wikimedia --output .forecast/pageviews.csv.gz`. To replay the public snapshot in an authenticated Modal workspace, install the Modal SDK and run `modal run modal_benchmark.py`.
+
+- [Public results and weekly scores](experiments/attention-results.json)
+- [Chart and audio input contracts](docs/benchmark-inputs.md)
+- [Implementation and acquisition plan](docs/plans/2026-11-25-music-forecasting.md)
+- [Point-in-Time Music Forecasting RFC](SPEC.md)
+- [Contribution guide](CONTRIBUTING.md)
 - [Apache License 2.0](LICENSE)
