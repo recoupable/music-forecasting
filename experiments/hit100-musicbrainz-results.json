@@ -1,0 +1,154 @@
+{
+  "status": "exploratory_issue_date_backtest",
+  "chart_sha256": "8d5039cb7519697bbb9d58eb4c8afe641058ba6114a36c6d2da58e0e41c76078",
+  "config_sha256": "4ea8d5c6f032ca5278f6fbce969fc2369f721d5447d8ebe65ebbadfd9d6050bb",
+  "release_editions": 1192,
+  "release_source_sha256": "8149a4ff59b022986b27a439622f112ee8c674fa6d3fbcea9dca5009ae6daf89",
+  "recordings": 7949,
+  "recordings_with_isrc": 6296,
+  "join_counts": {
+    "ambiguous_recording": 269,
+    "chart_before_indexed_release": 49,
+    "exact_text_match": 14,
+    "no_text_match": 7566,
+    "possible_title_or_credit_variant": 51
+  },
+  "comparisons_by_issue_lead_days": {
+    "7": {
+      "benchmark": "hit-100-musicbrainz-sample-issue-date-v1",
+      "dataset_sha256": "b62ebdbf71fedc84c60c04b41352803078eabd7960a7f749be29b0a14eaf3df0",
+      "precision_k": 100,
+      "validation": {
+        "training_weeks": 39,
+        "weeks": 13,
+        "strategies": {
+          "random": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "brier": null
+          },
+          "release_recency": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "brier": null
+          },
+          "artist_prior_chart_activity": {
+            "precision_at_k": 0.007692307692307693,
+            "recall_at_k": 1.0,
+            "brier": null
+          },
+          "logistic_age_catalog": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "brier": 0.000578083959
+          },
+          "logistic_age_catalog_chart": {
+            "precision_at_k": 0.007692307692307693,
+            "recall_at_k": 1.0,
+            "brier": 0.000572146623
+          }
+        }
+      },
+      "holdout": {
+        "fit_weeks": 65,
+        "weeks": 53,
+        "first_cutoff": "2024-01-01",
+        "last_cutoff": "2024-12-30",
+        "candidate_count_range": [
+          886,
+          1283
+        ],
+        "zero_positive_weeks": 52,
+        "challenger": {
+          "strategy": "logistic_age_catalog_chart",
+          "precision_at_k": 0.00018867924528301886,
+          "recall_at_k": 1.0,
+          "brier": 0.000793173956
+        },
+        "baseline": {
+          "strategy": "artist_prior_chart_activity",
+          "precision_at_k": 0.00018867924528301886,
+          "recall_at_k": 1.0,
+          "brier": null
+        },
+        "paired_precision_delta": 0.0,
+        "paired_95_interval": [
+          0.0,
+          0.0
+        ],
+        "moving_block_weeks": 14,
+        "hillclimb_observed": false
+      },
+      "fit_positive_recording_weeks": 14,
+      "holdout_positive_recording_weeks": 1
+    },
+    "0": {
+      "benchmark": "hit-100-musicbrainz-sample-issue-date-v1",
+      "dataset_sha256": "b62ebdbf71fedc84c60c04b41352803078eabd7960a7f749be29b0a14eaf3df0",
+      "precision_k": 100,
+      "validation": {
+        "training_weeks": 40,
+        "weeks": 14,
+        "strategies": {
+          "random": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "brier": null
+          },
+          "release_recency": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "brier": null
+          },
+          "artist_prior_chart_activity": {
+            "precision_at_k": 0.007857142857142858,
+            "recall_at_k": 1.0,
+            "brier": null
+          },
+          "logistic_age_catalog": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "brier": 0.000597823087
+          },
+          "logistic_age_catalog_chart": {
+            "precision_at_k": 0.007857142857142858,
+            "recall_at_k": 1.0,
+            "brier": 0.000580557665
+          }
+        }
+      },
+      "holdout": {
+        "fit_weeks": 66,
+        "weeks": 53,
+        "first_cutoff": "2024-01-01",
+        "last_cutoff": "2024-12-30",
+        "candidate_count_range": [
+          886,
+          1283
+        ],
+        "zero_positive_weeks": 51,
+        "challenger": {
+          "strategy": "logistic_age_catalog_chart",
+          "precision_at_k": 0.0003773584905660377,
+          "recall_at_k": 1.0,
+          "brier": 0.000825702454
+        },
+        "baseline": {
+          "strategy": "artist_prior_chart_activity",
+          "precision_at_k": 0.0003773584905660377,
+          "recall_at_k": 1.0,
+          "brier": null
+        },
+        "paired_precision_delta": 0.0,
+        "paired_95_interval": [
+          0.0,
+          0.0
+        ],
+        "moving_block_weeks": 13,
+        "hillclimb_observed": false
+      },
+      "fit_positive_recording_weeks": 17,
+      "holdout_positive_recording_weeks": 2
+    }
+  }
+}
