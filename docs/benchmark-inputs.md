@@ -69,3 +69,5 @@ python -m forecasting.audio /private/path/input.wav /private/path/manifest.json 
 ```
 
 Joining authorized audio features into the chart experiment is a subsequent ablation. See the [acquisition plan](plans/2026-11-25-music-forecasting.md) for the storage, retention and hosted execution dependencies.
+
+The repository includes a [source manifest](../experiments/audio-smoke-manifest.json) and [feature report](../experiments/audio-smoke-results.json) for a public-domain “Russian rag” excerpt. The availability date is the date the input was acquired for this test. To reproduce, download the WAV at the manifest's `source_url` and pass it to the command above with `experiments/audio-smoke-manifest.json --as-of 2026-11-25`. The recording exercises the extractor independently of the chart cohort. [Citizen DJ Project, Library of Congress, National Jukebox](https://citizen-dj.labs.loc.gov/loc-jukebox-popular/use/)

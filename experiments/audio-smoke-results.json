@@ -1,0 +1,9 @@
+{
+  "recording_id": "loc:jukebox-34462:00-02-11",
+  "audio_sha256": "708eb6cb54e194f32d3c06634c38fd17af2ffca1b32095e8c699cba7ea766932",
+  "extractor": "pcm-amplitude-v1",
+  "duration_seconds": 4.029,
+  "rms_amplitude": 0.06682212469485913,
+  "peak_amplitude": 0.70794677734375,
+  "amplitude_range_p95_p05": 0.09102892112392177
+}
